@@ -18,7 +18,7 @@
 
         $text = "Following customers reached our goal:\r\n";
 				foreach($users as $user) {
-          if (! is_empty($user['$properties']['$name'])) {
+          if (! empty($user['$properties']['$name'])) {
             $text = $text . 'name: ' . $user['$properties']['$name'] + ', ';
           }
 					$text = $text . 'email: ' . $user['$properties']['$email'] . " \r\n";
