@@ -16,8 +16,10 @@
 				$users = json_decode($payload['users'], true);
 				if (!$users) return array('ok' => false, 'error' => "invalid_payload");
 
+        $text = 'Following customers reached our goal:';
 				foreach($users as $user) {
-					$text = $user['$email'] . ' \n';
+          if ($user['$properties']['$name']) $text = 'name:' . $user['$properties']['$name'] + ', ';
+					$text = 'email:' . $user['$properties']['$email'] . " \r\n";
 				}
 			}
 
@@ -25,7 +27,7 @@
 
 			$attachment = array(
 				'text' 		=> $text,
-				'fallback'	=> 'Mixpanel notification',
+				'fallback'	=> 'You received '.count($users).' notifications.',
 				'color' 	=> '647997',
 				'mrkdwn_in'	=> 'text',
 			);
