@@ -16,7 +16,13 @@
 				$users = json_decode($payload['users'], true);
 				if (!$users) return array('ok' => false, 'error' => "invalid_payload");
 
-        $text = "Following customers reached our goal:\r\n";
+        if (! empty($this->icfg['label'])) {
+          $text = $this->icfg['label'] . "\r\n";
+        }
+        else {
+          $text = "Following customers reached our goal:\r\n";
+        }
+
 				foreach($users as $user) {
           if (! empty($user['$properties']['$name'])) {
             $text = $text . "name: " . $user['$properties']['$name'] . ", ";
@@ -24,8 +30,6 @@
 					$text = $text . "email: " . $user['$properties']['$email'] . " \r\n";
 				}
 			}
-
-      // $text = 'This is test.';
 
 			$attachment = array(
 				'text' 		=> $text,
