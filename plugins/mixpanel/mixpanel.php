@@ -18,8 +18,8 @@
 
         $text = 'Following customers reached our goal:';
 				foreach($users as $user) {
-          if ($user['$properties']['$name']) $text = 'name: *' . $user['$properties']['$name'] + '*, ';
-					$text = 'email: *' . $user['$properties']['$email'] . "* \r\n";
+          if ($user['$properties']['$name']) $text = $text . 'name: *' . $user['$properties']['$name'] + '*, ';
+					$text = $text . 'email: *' . $user['$properties']['$email'] . "* \r\n";
 				}
 			}
 
