@@ -2,7 +2,7 @@ Hammock
 =========
 
 Hammock is a standalone webapp for running [Slack](https://slack.com) integrations.
-This allows you to modify existing integrations, write new custom integrations, or use 
+This allows you to modify existing integrations, write new custom integrations, or use
 certain integrations inside your firewall.
 
 Integrations written for Hammock use the same API as Slack itself, so contributing
@@ -32,7 +32,7 @@ the Heroku toolbelt already):
 
     cd hammock
     heroku create
-    heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-php.git#redis
+    heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-php.git
     heroku config:set HAMMOCK_ROOT=http://{URL-TO-APP}/
     heroku config:set HAMMOCK_CLIENT_ID={YOUR-CLIENT-ID}
     heroku config:set HAMMOCK_CLIENT_SECRET={YOUR-CLIENT-SECRET}
@@ -52,8 +52,8 @@ You can also check the [full service reference documentation](docs/services_ref.
 ## Roadmap
 
 This version of Hammock is pretty barebones, designed to support simple webhook-to-Slack
-style integrations first. To better support this, we'll be adding a replay-debugger for 
-capturing incoming webhooks and being able to replay them in a read-only mode while 
+style integrations first. To better support this, we'll be adding a replay-debugger for
+capturing incoming webhooks and being able to replay them in a read-only mode while
 developing.
 
 Future plugins will be able to provide cross-plugin authentication, so that e.g. a GitHub
