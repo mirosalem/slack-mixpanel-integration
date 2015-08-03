@@ -2,19 +2,28 @@
 
 	class MixpanelPlugin extends SlackServicePlugin {
 		const NAME = "Mixpanel";
-		const DESC = "Zero character communication.";
+		const DESC = "An analitics platform.";
 		const TOOLTIP = "Get Mixpanels in Slack.";
 		const DEFAULT_BOT_NAME = "Mixpanel";
 
 		function onHook($request){
+			$payload = $request['post'];
+			if (!$payload || !is_array($payload)) return array('ok' => false, 'error' => "invalid_payload");
 
-			if (!$request['get']['username']){
-				return array('ok' => false, 'error' => "invalid_payload");
+			$text = '';
+			if (isset($payload['users']))
+			{
+				$users = json_decode($payload['users'], true);
+				if (!$users) return array('ok' => false, 'error' => "invalid_payload");
+
+				foreach($users as $user) {
+					$text = $user['$email'] . ' \n';
+				}
 			}
 
 			$attachment = array(
-				'text' 		=> 'Mixpanel from *'.$request['get']['username'].'*',
-				'fallback'	=> 'Mixpanel from '.$request['get']['username'],
+				'text' 		=> $text,
+				'fallback'	=> 'Mixpanel notification',
 				'color' 	=> '9B59B6',
 				'mrkdwn_in'	=> 'text',
 			);
