@@ -1,0 +1,4 @@
+<p class="bold">{$DESC}</p>
+
+<p><a href="http://mixpanel.com/">Mixpanel</a> is an analytics platform ever for mobile and the web.</p>
+<p>This integration will post notifications in a Slack channel when Mxpanel pushed anyalitcs data.</p>
