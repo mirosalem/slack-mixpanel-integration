@@ -17,10 +17,10 @@
 				if (!$users) return array('ok' => false, 'error' => "invalid_payload");
 
         if (! empty($this->icfg['label'])) {
-          $text = $this->icfg['label'] . "\r\n";
+          $text = $this->icfg['label'] . "\r\n\r\n";
         }
         else {
-          $text = "Following customers reached our goal:\r\n";
+          $text = "Following customers reached our goal:\r\n\r\n";
         }
 
 				foreach($users as $user) {
