@@ -2,8 +2,8 @@
 
 	class MixpanelPlugin extends SlackServicePlugin {
 		const NAME = "Mixpanel";
-		const DESC = "An analitics platform.";
-		const TOOLTIP = "Get Mixpanels in Slack.";
+		const DESC = "Receive webhook notifiaction from Mixpanel.";
+		const TOOLTIP = "Get Mixpanel notifications in Slack.";
 		const DEFAULT_BOT_NAME = "Mixpanel";
 
 		function onHook($request){
