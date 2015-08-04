@@ -10,7 +10,7 @@
   "repository": "https://github.com/tinyspeck/hammock",
   "logo": "https://cdn.rawgit.com/tinyspeck/hammock/master/images/logo.png",
   "env": {
-    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-php.git#redis",
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-php.git",
     "HAMMOCK_ROOT": {
       "description": "URL to this app. You can set this later.",
       "required": false
