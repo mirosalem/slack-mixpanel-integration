@@ -1,6 +1,7 @@
-Slack integration to receive Mixpanel notification based on Hammmock(https://github.com/tinyspeck/hammock)
+Slack integration to receive Mixpanel notification
 =========
 
+It's based on Hammmock(https://github.com/tinyspeck/hammock)
 Hammock is a standalone webapp for running [Slack](https://slack.com) integrations.
 This allows you to modify existing integrations, write new custom integrations, or use
 certain integrations inside your firewall.
