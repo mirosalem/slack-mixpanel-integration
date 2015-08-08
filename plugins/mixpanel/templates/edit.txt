@@ -9,11 +9,11 @@
 <div id="service_setup" class="accordion_section">
 	<a class="accordion_expand btn btn-outline btn-small" onclick="TS.web.toggleSection('service_setup');">{if !$smarty.get.added}Expand{else}Close{/if}</a>
 	<h3><a onclick="TS.web.toggleSection('service_setup');">Setup Instructions</a></h3>
-	<p>We'll guide you through the steps necessary to configure Yo so it can start sending data to Slack.</p>
+	<p>We'll guide you through the steps necessary to configure Mixpanel so it can start sending data to Slack.</p>
 
 	<div class="accordion_subsection" style="{if !$smarty.get.added}display:none;{/if}">
 		<h4>Step 1</h4>
-		<p>You'll need a Micpanel account for this integration. Go to <a href="http://mixpanel.com/">http://mixpanel.com/</a> and use <code>{$this->getHookURL()}</code> as the <strong>Callback URL</strong>. Enter your other details to finish creating your account.</p>
+		<p>You'll need a Mixpanel account for this integration. Go to <a href="https://mixpanel.com/">https://mixpanel.com/report/{YOUR_MIXPANEL_PROJECT_ID}/triggers/#builder/webhook/?step=1</a> and use <code>{$this->getHookURL()}</code> as the <strong>Callback URL</strong>. Enter your other details to finish creating your account.</p>
 		<p class="large_bottom_margin"><img src="{$asset}yo_step1.png" style="border-radius: 0.5rem; border: 1px solid #DDD;"></p>
 
 		<h4>Step 2</h4>
