@@ -14,7 +14,6 @@
 	<div class="accordion_subsection" style="{if !$smarty.get.added}display:none;{/if}">
 		<h4>Step 1</h4>
 		<p>You'll need a Mixpanel account for this integration. Go to <a href="https://mixpanel.com/">https://mixpanel.com/report/{YOUR_MIXPANEL_PROJECT_ID}/triggers/#builder/webhook/?step=1</a> and use <code>{$this->getHookURL()}</code> as the <strong>Callback URL</strong>. Enter your other details to finish creating your account.</p>
-		<p class="large_bottom_margin"><img src="{$asset}yo_step1.png" style="border-radius: 0.5rem; border: 1px solid #DDD;"></p>
 
 		<h4>Step 2</h4>
 		<p class="large_bottom_margin">Now when someone sends a webhook notification to your newly created account, it will be posted to Slack.</p>
