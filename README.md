@@ -1,7 +1,7 @@
 Slack integration to receive Mixpanel notification
 =========
 
-It's based on Hammmock(https://github.com/tinyspeck/hammock)
+It's based on Hammock(https://github.com/tinyspeck/hammock)
 
 This integration could make a simple receiver of mixpanel webhook,
 and post user datas on Slack channel what you want to post.
