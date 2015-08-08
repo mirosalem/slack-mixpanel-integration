@@ -2,20 +2,11 @@ Slack integration to receive Mixpanel notification
 =========
 
 It's based on Hammmock(https://github.com/tinyspeck/hammock)
-Hammock is a standalone webapp for running [Slack](https://slack.com) integrations.
-This allows you to modify existing integrations, write new custom integrations, or use
-certain integrations inside your firewall.
 
-Integrations written for Hammock use the same API as Slack itself, so contributing
-new Integrations here will allow them to be added to the main Slack integrations list.
+This integration could make a simple receiver of mixpanel webhook,
+and post user datas on Slack channel what you want to post.
 
-
-## Requirements
-
-Hammock requires a webserver running a recent version of PHP.  
-For integrations that require polling, `cron` is also required
-(or `at`/`schtasks` on Windows).
-
+![screenshot](https://raw.githubusercontent.com/toshipon/slack-mixpanel-integration/master/images/mixpanel.png)
 
 ## Installation
 
@@ -28,7 +19,7 @@ For integrations that require polling, `cron` is also required
 
 ## Heroku
 
-You can run Hammock on Heroku using the following commands (you'll need  to have installed
+You can run this integration on Heroku using the following commands (you'll need  to have installed
 the Heroku toolbelt already):
 
     cd hammock
@@ -43,33 +34,3 @@ the Heroku toolbelt already):
 All config options are loaded from the environment variables and data is stored in Redis.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Adding integrations
-
-To create your own integrations [read the service docs](docs/services.md).
-
-You can also check the [full service reference documentation](docs/services_ref.md).
-
-
-## Roadmap
-
-This version of Hammock is pretty barebones, designed to support simple webhook-to-Slack
-style integrations first. To better support this, we'll be adding a replay-debugger for
-capturing incoming webhooks and being able to replay them in a read-only mode while
-developing.
-
-Future plugins will be able to provide cross-plugin authentication, so that e.g. a GitHub
-integration can auth you against GitHub once and then allow you to add multiple different
-integrations for code, issues, gists, etc. and share the credentials. This will be supported
-by a different subclass of plugins.
-
-The visual appearance of Hammock somewhat matches the Slack services pages, but this will
-be changed to more closely match, have building blocks for commmon UI elements, and switch
-the the planned tabbed interface for integration config.
-
-For integrations that require some kind of polling, Hammock will support polling callbacks
-and handle some API call diffing behavior automatically. Using this mechanism, an integration
-can register a method to be called when the results of an external API call change.
-
-We also plan to support integrations that are triggered from within Slack, via slash commands
-and other user-initiated actions.
