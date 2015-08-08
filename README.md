@@ -22,7 +22,7 @@ and post user datas on Slack channel what you want to post.
 You can run this integration on Heroku using the following commands (you'll need  to have installed
 the Heroku toolbelt already):
 
-    cd hammock
+    cd slack-mixpanel-integration
     heroku create
     heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-php.git
     heroku config:set HAMMOCK_ROOT=http://{URL-TO-APP}/
